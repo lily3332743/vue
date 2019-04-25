@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+import 'styles/reset.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 // border.css是为了解决在pc端中的1px在移动端显示变成两倍或者三倍的问题，保证1px的border在移动端中也是1px，而不是2px或3px
 
 Vue.config.productionTip = false
