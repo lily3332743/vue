@@ -47,7 +47,7 @@ export default {
 //    height: 0
 //    padding-bottom: 24.5%
 // 这么设置的原因是因为移动端在网速很慢的情况下会出现轮播图下方内容文字抖动的情况，也就是一开始位置不对然后加载好了位置又突然一下子就变了
-// 所以设置padding-bottom为24.5%撑开div的高度，此处的百分比是相对于自身width的大小而言的，这里的width大概是400多px，对应轮播图的高度100px
+// 所以设置padding-bottom为24.5%撑开div的高度，此处的百分比是相对于自身width为100%的大小而言的，这里的width大概是400多px，对应轮播图的高度100px
 
 // .wrapper >>> .swiper-pagination-bullet-active
 //      background-color: red !important
