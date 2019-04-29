@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div
                   class="icon"
@@ -57,7 +57,10 @@ export default {
         id: '0009',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png',
         desc: '动植物园'
-      }]
+      }],
+      swiperOption: {
+
+      }
     }
   },
   computed: {
@@ -95,34 +98,39 @@ export default {
     height: 0
     width: 100%
     padding-bottom: 50%
-  .icon
-    position: relative
-    overflow: hidden
-    float:  left
-    width:  25%
-    height: 0
-    padding-bottom: 25%
-    .icon-img
-      position: absolute
-      top:  0
-      left: 0
-      right:  0
-      bottom: .44rem
-      box-sizing: border-box
-      padding:  .1rem
-      img
-        height: 100%
-    .icon-desc
-      position: absolute
-      left: 0
-      right:  0
-      bottom: 0
-      height: .44rem
-      line-height:  .44rem
-      color:  $darkTextColor
-      // overflow: hidden
-      // white-space: nowrap
-      // text-overflow: ellipsis
-      // 这三行代码的作用是，当icon的desc部分过长时直接在后面显示三个点...,由于这个功能很常见，所以把它封装到了~styles/mixins.styl
-      ellipsis()
+  .icons
+    margin-top: .1rem
+    .icon
+      position: relative
+      overflow: hidden
+      float:  left
+      width:  25%
+      height: 0
+      padding-bottom: 25%
+      .icon-img
+        position: absolute
+        top:  0
+        left: 0
+        right:  0
+        bottom: .44rem
+        box-sizing: border-box
+        padding:  .1rem
+        img
+          height: 100%
+      .icon-desc
+        position: absolute
+        left: 0
+        right:  0
+        bottom: 0
+        height: .44rem
+        line-height:  .44rem
+        color:  $darkTextColor
+        // overflow: hidden
+        // white-space: nowrap
+        // 规定段落中的文本不进行换行
+        // text-overflow: ellipsis
+        // text-overflow 属性规定当文本溢出包含元素时发生的事情
+        // ellipsis 显示省略符号来代表被修剪的文本。
+        // 这三行代码的作用是，当icon的desc部分过长时直接在后面显示三个点...,由于这个功能很常见，所以把它封装到了~styles/mixins.styl
+        ellipsis()
 </style>
