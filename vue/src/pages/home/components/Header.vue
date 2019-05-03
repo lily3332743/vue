@@ -7,10 +7,13 @@
             <span class="iconfont">&#xe632;</span>
             输入城市/景点/游玩主题
         </div>
-        <div class="header-right">
+        <!-- 使用router-link进行路由跳转，当点击此片区域时会定位到/city -->
+        <router-link to='/city'>
+          <div class="header-right">
             {{this.city}}
             <span class="iconfont arrow-icon">&#xe615;</span>
-        </div>
+          </div>
+        </router-link>
     </div>
 </template>
 
@@ -27,7 +30,7 @@ export default {
   @import '~@/assets/styles/varibles.styl';//style中要引入样式，不能直接使用import，要使用@import，其中路径中的@符号表示src目录，但是当在css中引用其他的css时如果要使用这个@符号必须前面加一个~号，这块的配置在build文件夹下的webpack.base.conf.js中可进行设置和扩展,此处修改完webpack.base.conf.js配置也可以写成@import '~styles/varibles.styl'
   .header
     display: flex
-    line-height: .86rem
+    line-height: $headerHeight
     background-color: $bgColor //此处直接使用varibles.styl中定义的全局变量，即背景色
     color: #fff
     .header-left
@@ -43,6 +46,7 @@ export default {
       border-radius: .1rem
       color: #ccc
     .header-right
+      color: #fff
       width: 1.4rem
       float: right
       text-align: center
