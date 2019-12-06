@@ -1,5 +1,6 @@
 <template>
     <div class="icons">
+      <!-- 这个swiper是npm install vue-awesome-swiper 下载的 -->
         <swiper :options="swiperOption">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div
