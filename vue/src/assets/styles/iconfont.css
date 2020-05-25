@@ -5,6 +5,7 @@
   url('./iconfont/iconfont.woff?t=1556156957543') format('woff'),
   url('./iconfont/iconfont.ttf?t=1556156957543') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
   url('./iconfont/iconfont.svg?t=1556156957543#iconfont') format('svg'); /* iOS 4.1- */
+/* 初始下载iconfont需要修改相对路径，保存iconfont下的主要字体文件 */
 }
 
 .iconfont {

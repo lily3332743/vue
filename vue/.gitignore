@@ -6,6 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 static/mock
 
+# static下面的文件都是可以在url输入路径后直接访问到的，所以不希望提交线上时把静态资源模拟数据也一起带过去
+
 # Editor directories and files
 .idea
 .vscode

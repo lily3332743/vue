@@ -16,6 +16,7 @@ module.exports = {
         pathRewrite: {
           '^/api': '/static/mock'
         }
+        // 对于API路径进行设置（配置代理），当上线发布时只需要修改API路径即可（此功能由webpack-dev-server提供）
       }
     },
 

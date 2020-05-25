@@ -13,6 +13,7 @@ export default {
 }
 </script>
 
+// 样式里面引入样式必须使用@import
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header

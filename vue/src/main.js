@@ -8,6 +8,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
+// 在这里引入iconfont.css文件
 import 'swiper/dist/css/swiper.css'
 // border.css是为了解决在pc端中的1px在移动端显示变成两倍或者三倍的问题，保证1px的border在移动端中也是1px，而不是2px或3px
 

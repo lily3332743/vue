@@ -17,7 +17,7 @@ export default {
     padding: 0 .1rem
     background: $bgColor
     .search-input
-      box-sizing: border-box
+      box-sizing: border-box // 因为要给字体留点间距所以设置了padding: 0 .1rem，需要保持总宽度不变使用border-box
       height: .62rem
       line-height: .62rem
       width: 100%

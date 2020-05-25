@@ -78,12 +78,14 @@ export default {
       border-color: #ccc
     &:after
       border-color: #ccc
+      // 顶部底部分别有一像素边框
   .border-bottom
     &:before
       border-color: #ccc
   .list
     overflow: hidden
     position: absolute
+    height: 100% //解决wrapper高度导致BSscroll失效的问题，wrapper必须固定高度且小于content高度
     top: 1.58rem
     left: 0
     right: 0
@@ -95,11 +97,12 @@ export default {
       color: #666
       font-size: .26rem
     .button-list
-      overflow: hidden
-      padding: .1rem .6rem .1rem .1rem
+      overflow: hidden //为了形成BFC
+      padding: .1rem .6rem .1rem .1rem //右边预留控件给ABC首字母做控件
       .button-wrapper
         float: left
         width: 33.33%
+        // 外面不包裹wrapper的话就是会另外算margin，导致一行只能放置两个按钮，所以必须给wrapper先设置宽度为1/3
         .button
           margin: .1rem
           padding: .1rem 0
