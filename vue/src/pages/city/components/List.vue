@@ -85,7 +85,7 @@ export default {
   .list
     overflow: hidden
     position: absolute
-    height: 100% //解决wrapper高度导致BSscroll失效的问题，wrapper必须固定高度且小于content高度
+    //height: 100% //解决wrapper高度导致BSscroll失效的问题，wrapper必须固定高度且小于content高度
     top: 1.58rem
     left: 0
     right: 0
