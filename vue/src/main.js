@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store/index'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
@@ -20,6 +21,8 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store: store,
+  // 此处传入vuex的store可以保证所有vue组件都可以读取到数据，store会被派发到每一个子组件
   components: { App: App },
   // 局部组件的使用
   template: '<App/>'

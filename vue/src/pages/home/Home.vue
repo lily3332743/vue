@@ -1,6 +1,6 @@
 <template>
     <div>
-        <home-header :city="city"></home-header>
+        <home-header></home-header>
         <!-- 父子组件之间的city传值 -->
         <home-swiper :list="swiperList"></home-swiper>
         <home-icons :list="iconList"></home-icons>
@@ -27,7 +27,6 @@ export default {
   },
   data () {
     return {
-      city: '',
       // 利用父子组件传值把index.json里的静态配置信息通过Ajax方法传递值过去
       swiperList: [],
       iconList: [],
@@ -50,7 +49,6 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        this.city = data.city
         this.swiperList = data.swiperList
         this.iconList = data.iconList
         this.recommendList = data.recommendList

@@ -10,7 +10,9 @@
         <!-- 使用router-link进行路由跳转，当点击此片区域时会定位到/city -->
         <router-link to='/city'>
           <div class="header-right">
-            {{this.city}}
+            <!-- {{this.$store.state.city}} -->
+            <!-- 对应刚刚创建的vuex的store里的state -->
+            {{ this.doubleCity }}
             <span class="iconfont arrow-icon">&#xe615;</span>
           </div>
         </router-link>
@@ -18,10 +20,15 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    // mapState是state的语法糖,当一个组件需要获取多个状态时候，将这些状态都声明为computed属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性，让你少按几次键
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
+    // mapState就是把city给映射进computed里去,同名映射
+    // mapGetters也跟mapState的原理是一样的
   }
 }
 </script>
@@ -47,7 +54,8 @@ export default {
       color: #ccc
     .header-right
       color: #fff
-      width: 1.4rem
+      min-width: 1.04rem // 不把width定死，只写min-width，因为有些城市四个字可能会不够装
+      padding: 0 .1rem
       float: right
       text-align: center
       .arrow-icon
