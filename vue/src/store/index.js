@@ -18,7 +18,7 @@ export default new Vuex.Store({
   // },
   getters: {
     doubleCity (state) {
-      return state.city + ' ' + state.city
+      return state.city
     }
   }
   // getters类似于computed，可以避免数据冗余，也类似于我们重写的get方法
