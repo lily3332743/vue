@@ -2,14 +2,19 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of list" :key="item.id">
-          <img class="item-img" :src="item.imgUrl" alt="">
+      <router-link tag="li"
+        class="item border-bottom"
+        v-for="item of list"
+        :key="item.id"
+        :to="'/detail/' + item.id">
+        <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
+      <!-- router-link渲染过程当中都是直接替换为a标签，但是a标签有默认的样式，因此直接使用router-link的tag将其替换为li标签，就可以摆脱a标签的默认样式 -->
     </ul>
   </div>
 </template>

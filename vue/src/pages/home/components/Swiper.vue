@@ -53,6 +53,8 @@ export default {
 // 所以设置padding-bottom为24.5%撑开div的高度，此处的百分比是相对于自身width为100%的大小而言的，这里的width大概是400多px，对应轮播图的高度100px
 // margin、padding设置为百分比，是相对父元素宽来说的 , height设置百分比是相对父元素高来说的
 
+// 关于设置height为0为啥图片不会消失这一点，由于height设置的是容器div的高度，并不是图片的高度，因此没有影响，容器作为了我们的占位符
+
 // .wrapper >>> .swiper-pagination-bullet-active
 //      background-color: red !important
 //  这一段表示进行样式穿透，不受scoped的限制，让这一段样式设置可以在全局生效
