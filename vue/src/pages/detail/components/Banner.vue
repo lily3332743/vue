@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/piao/fusion/1802/42/7c92b9a381e46402.jpg_640x200_1cdce2a4.jpg"/>
+      <img class="banner-img" src="//source.qunarzz.com/site/images/wns/20171019_pc_464x320_7667.jpg"/>
       <div class="banner-info">
         <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
         <div class="banner-number">
@@ -53,7 +53,7 @@ export default {
     position: relative
     overflow: hidden
     height: 0
-    padding-bottom: 32%
+    padding-bottom: 46%
     .banner-img
       width: 100%
     .banner-info
