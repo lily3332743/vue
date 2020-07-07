@@ -49,8 +49,13 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)// 绑定scroll事件
-  }
+    // 这个属于全局绑定事件，因为对象是全局对象window，因此这个事件不仅对这个组件生效，也会影响到其他的组件，对于全局注册的事件必须解绑
+  },
   // 这个方法相当于mounted，但跟mounted不一样，每次页面一展示都会运行
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+  // deactivated就是当当前页面被其他页面替换的时候会生效，在此注销全局事件
 }
 </script>
 
