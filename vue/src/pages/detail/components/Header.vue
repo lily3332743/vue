@@ -75,6 +75,7 @@ export default {
       color: #ffffff
       font-size: .4rem
   .header-fixed
+    z-index: 2 // 权重比轮播组件小，比成人票等文字内容大，可以覆盖文字内容，这样就可以修复在上滑时fix组件盖不住字体内容的bug了
     position: fixed
     top: 0
     left: 0
